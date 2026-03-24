@@ -1,0 +1,10 @@
+public class Program
+{
+	public static int Search(int[] arr, int item, int index)
+	{
+		if(arr[index] == item) return index;
+		index++;
+		Search(arr, item , index);
+			
+	}
+}
