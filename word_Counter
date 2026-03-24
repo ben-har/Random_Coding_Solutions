@@ -1,0 +1,28 @@
+void NumOfDuplicates()
+{
+    String[] Arr = ["apple", "banana", "apple", "cherry", "banana", "apple"];
+
+    Dictionary<String,int> myBigdic = new Dictionary<String, int>();
+
+    foreach(String str in Arr)
+    {
+        if(myBigdic.ContainsKey(str))
+        {
+            myBigdic[str] += 1;
+
+        }
+        else
+        {
+            myBigdic[str] = 1;
+        }
+    }
+
+    foreach(var c  in myBigdic.Keys)
+    {
+        Console.WriteLine(myBigdic[c]);
+    }
+    
+    
+
+    
+}
