@@ -1,0 +1,17 @@
+ void DicSwap()
+ {
+     Dictionary<String, int> myBigdic = new Dictionary<String, int>()
+     {
+         {"a",1 },
+         {"b",2},
+         {"c",3},
+     };
+     Dictionary<int, string> mySmoldic = new Dictionary<int, string>();
+     
+     foreach(string str in myBigdic.Keys)
+     {
+         mySmoldic.Add(myBigdic[str], str);
+         Console.WriteLine($"the num is {myBigdic[str]} and the string is {mySmoldic[myBigdic[str]]}");
+     }
+   
+ }
