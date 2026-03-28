@@ -1,0 +1,43 @@
+namespace SpinningWheelTwo
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            char[] LoadingValues = {'\\', '|', '/', '-' };
+
+            long CurrentTimeInTicks = DateTime.Now.Ticks;
+
+            long OneSecondUnit = TimeSpan.TicksPerSecond;
+
+            char ResultHolder;
+
+            while(true)
+            {
+                for(int i = 0; i < LoadingValues.Length;)
+                {
+                    if(DateTime.Now.Ticks -  CurrentTimeInTicks >= OneSecondUnit / 10)
+                    {
+                        CurrentTimeInTicks = DateTime.Now.Ticks;
+
+                        Console.Clear();
+
+                        ResultHolder = LoadingValues[i];
+
+                        Console.WriteLine(ResultHolder);
+
+                        i++;
+
+                    }
+
+
+
+
+                }
+
+
+
+            }
+        }
+    }
+}
