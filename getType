@@ -1,0 +1,12 @@
+bool GetType(object a, object b )
+	{
+		return a.GetType() != b.GetType() ? false  : a.Equals(b) ? true : false;
+		
+	}
+	
+	public static void Main()
+	{
+		Program myprog = new Program();
+		Console.WriteLine(myprog.GetType(true, true));
+			
+	}
