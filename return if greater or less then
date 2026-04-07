@@ -1,0 +1,19 @@
+double[] arr = new double[]{1,23,45,67};
+			List<int> returnArr = new List<int>();
+			if(arr.Length == 0 ) Console.WriteLine(returnArr.ToArray());
+			
+			returnArr.Add(0);
+			returnArr.Add(0);
+		
+			foreach(double d in arr)
+			{
+				if(d > 0)
+				{
+					returnArr[0] = returnArr[0] + 1;	
+				}
+				else 
+				{
+					returnArr[1] += (int)d;
+				}
+			}
+			 Console.WriteLine(returnArr.ToArray());
