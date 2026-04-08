@@ -1,0 +1,16 @@
+using System.Text;
+public class Program 
+{
+    public static string Maskify(string str) 
+    {
+			if(str.Length < 4){return str;}
+			StringBuilder sb = new StringBuilder();
+			for(int i = 0; i < str.Length; i++)
+			{
+				char StrAppend = i >= str.Length - 4 ? str[i] : '#';
+				sb.Append(StrAppend);
+			}
+			return sb.ToString();
+      
+    }
+}
