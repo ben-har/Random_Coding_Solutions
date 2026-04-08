@@ -1,0 +1,4 @@
+ public static int CounterpartCharCode(char symbol) 
+    {
+			return symbol == char.ToLower(symbol) ? (int)char.ToUpper(symbol) : (int)char.ToLower(symbol);
+    }
