@@ -1,0 +1,12 @@
+public static string HighLow(string str) 
+    {
+      string[] arrHolder = str.Split(' ');
+			int max = -1000;
+			int min = 1000;
+			foreach(string i in arrHolder)
+			{
+				max = max < int.Parse(i) ? int.Parse(i) : max;
+				min = min > int.Parse(i) ? int.Parse(i) : min;
+			}
+			return $"{max} {min}";
+    }
