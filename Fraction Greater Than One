@@ -1,0 +1,9 @@
+public class Program
+{
+	public static bool GreaterThanOne(string str)
+	{
+		string[] Holder = str.Split('/');
+		return int.Parse(Holder[0]) > int.Parse(Holder[1]) ? true : false;
+		
+	}
+}
