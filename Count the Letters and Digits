@@ -1,0 +1,18 @@
+using System.Linq;
+using System;
+
+public class Program 
+{
+    public static string ount_all(string txt) 
+    {	 	
+			int charCount = 0;
+			int numCount = 0;
+			foreach(char c in txt)
+			{
+				numCount = char.IsDigit(c) ? numCount + 1 : numCount;
+				charCount = Char.IsLetter(c) ? charCount + 1 : charCount;
+			
+			}
+			return $"{{ LETTERS = {charCount}, DIGITS = {numCount} }}";
+    }
+}
