@@ -1,0 +1,25 @@
+using System;
+using System.Linq;
+public class Program 
+{
+    public static int SumSmallest(int[] values) 
+    {
+			
+			for(int i = 0; i < values.Length; i++)
+			{
+				for(int j = 0; j < values.Length - 1; j++)
+				{
+					if(values[j] > values[j + 1] )
+					{
+						int temp = 0; 
+						temp = values[j + 1];
+						values[j + 1] = values[j];
+						values[j] = temp;
+					}
+					values[j] = values[j] < 0 ? 10000000 : values[j];
+					
+				}
+			}
+			return values[0] + values[1];
+    }
+}
