@@ -1,0 +1,6 @@
+public class Program {
+	public static int solutions(int a, int b, int c) {
+		int temp = (b * b) - 4 * (a * c);
+		return temp > 0 ? 2 : temp == 0 ? 1 : 0;
+	}
+}
