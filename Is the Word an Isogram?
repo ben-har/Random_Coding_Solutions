@@ -1,0 +1,21 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+public class Program 
+{
+    public static bool IsIsogram(string str) 
+    {
+			char[] myarr;
+			myarr = str.ToCharArray();
+			
+			for(int i = 0; i < str.Length; i++)
+			{
+				for(int j = i + 1; j < str.Length - 1 ; j ++)
+				{
+					if(Char.ToLower(str[i]) == Char.ToLower(str[j])){return false;}
+				}
+				
+			}
+			return true;
+    }
+}
