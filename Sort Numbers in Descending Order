@@ -1,0 +1,24 @@
+using System.Text;
+public class Program 
+{
+    public static int SortDescending(int num) 
+    {
+      StringBuilder numStr = new StringBuilder(num.ToString());
+			for(int i = 0; i < numStr.Length; i ++)
+			{
+				for(int j = 0; j < numStr.Length - 1 ; j++)
+				{
+					if(numStr[j] < numStr[j + 1])
+					{
+						char temp = numStr[j + 1];
+						numStr[j + 1] = numStr[j];
+						numStr[j] = temp;
+					}
+					
+				}
+			}
+			return int.Parse(numStr.ToString());
+    }
+}	
+				
+			
