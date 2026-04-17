@@ -1,0 +1,15 @@
+using System.Text;
+using System.Collections.Generic;
+public class Program 
+{
+    public static string RemoveSpecialCharacters(string str) 
+    {
+			StringBuilder sb = new StringBuilder(); 
+     	List<string> arr = new List<string>{".", "!", "@", "#", "$", "%","^","&", "\\","*", "(", ")", "[", "]","{","}","=","+","<",">",",","`","~","|","?"};
+			foreach(char c in str)
+			{
+				if(!arr.Contains(c.ToString())){sb.Append(c);}
+			}
+			return sb.ToString();
+    }
+}
