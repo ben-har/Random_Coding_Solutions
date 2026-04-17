@@ -1,0 +1,17 @@
+using System;
+
+public class Program
+{
+    public static int LargestGap(int[] arr) {
+		Array.Sort(arr);
+		int difference = 0;
+	  for(int i = 0; i < arr.Length - 1; i++)
+		{
+			int TempDiff = arr[i] > arr[i + 1] ? arr[1] - arr[i + 1] : arr[i + 1] - arr[i];
+			difference = difference < TempDiff ? TempDiff : difference;
+			
+		}
+			
+		return difference;
+	}	
+}	
