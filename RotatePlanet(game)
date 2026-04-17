@@ -1,0 +1,17 @@
+ Vector3 MousePos = Input.mousePosition;
+ if(MousePos.x > 920 && MousePos.x < 1000)
+ {
+     
+     float changeYAxis = MousePos.y > 564 ? 1 : -1;
+
+     this.transform.Rotate(changeYAxis, 0, 0);
+
+ }
+ else if(MousePos.x < 920 && MousePos.x > 460 ||  MousePos.x > 1000 && MousePos.x < 1457)
+ {
+     
+
+     float changeXAxis = MousePos.x < 970 ? 1 : -1;
+
+     this.transform.Rotate(0, changeXAxis, 0);
+
