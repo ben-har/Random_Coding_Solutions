@@ -1,0 +1,16 @@
+using System;
+
+using System.Text;
+public class Program 
+{
+    public static string MakeTitle(string str) 
+    {
+      StringBuilder sb = new StringBuilder(str);
+			sb[0] = char.ToUpper(sb[0]);
+			for(int i = 1; i < sb.Length; i++)
+			{
+				sb[i] = str[i] == char.ToLower(str[i]) && str[i - 1] == ' ' ? char.ToUpper(str[i]) : str[i];
+			}
+			return sb.ToString();
+    }
+}
