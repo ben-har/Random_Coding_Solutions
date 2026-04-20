@@ -1,0 +1,19 @@
+using System;
+using System.Linq;
+using System.Collections.Generic;
+public class Program 
+{
+    public static int[] RemoveSmallest(int[] values) 
+    {
+			int[] ArrayOfResults = new int[]{values[0], 0};
+			List<int> ListOfValues = new List<int>(values);
+			for(int i = 0; i < values.Length ; i++)
+			{
+				ArrayOfResults[0] = ArrayOfResults[0] > values[i] ? values[i] : ArrayOfResults[0];
+				ArrayOfResults[1] = ArrayOfResults[0] > values[i] ? i : ArrayOfResults[1];
+			}
+			ListOfValues.RemoveAt(ArrayOfResults[1]);
+			return ListOfValues.ToArray();
+			
+    }
+}
