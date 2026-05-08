@@ -1,0 +1,15 @@
+internal int FindGDC(int n1 , int n2, int Remainder = 0 )
+	{
+		
+		int Dividend = n1 > n2 ? Math.Abs(n1) : Math.Abs(n2);
+		int Divisor = n2 < n1 ? Math.Abs(n2) : Math.Abs(n1);
+		Remainder = Dividend %  Divisor;
+		if(Remainder != 0) 
+		{
+			Dividend = Divisor;
+			Divisor = Remainder;
+			return FindGDC(Dividend , Divisor , Remainder);
+			
+		}
+		return Divisor;
+	}
