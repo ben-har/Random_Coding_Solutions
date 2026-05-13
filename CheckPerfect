@@ -1,0 +1,10 @@
+ public static bool CheckPerfect(int num) 
+    {
+			if(num <= 0) {return false;}
+			int Checker = 0;
+			for(int i = 2; i <= num; i++)
+			{
+				if(num % i == 0) {Checker += num / i;}
+			}
+			return num == Checker;
+    }
