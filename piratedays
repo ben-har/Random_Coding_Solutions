@@ -1,0 +1,14 @@
+public static int NumberOfDays(int[] coordinates) 
+    {
+			int X = coordinates[0] < 0 ? coordinates[0] * -1 : coordinates[0];
+			int Y = coordinates[1] < 0 ? coordinates[1] * -1 : coordinates[1];
+			int total = X + Y;
+			
+			
+			for(int i = 5; i < (X + Y); i++)
+			{
+				if(i %  5 == 0){total++; i += 4;}
+			}
+			
+			return total;
+    }
