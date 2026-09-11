@@ -1,0 +1,13 @@
+ bool isPalindrome(int x) {
+        if(x < 0){return false;}
+        
+        long result = 0;
+        int og = x;
+        while(x != 0)
+        {
+            long digits = x % 10;
+            result =(result * 10) + digits;
+            x /= 10;
+        }
+        return result == og ;
+    }
