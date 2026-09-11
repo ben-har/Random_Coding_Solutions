@@ -1,0 +1,27 @@
+ int LongestSequence(int[] arr)
+    {
+       HashSet<int> seen = new HashSet<int>(arr);
+
+        int Longest = 0;
+
+        foreach(int n in seen)
+        {
+            
+            if(!seen.Contains(n - 1))
+            {
+                int CurrentNum = n;
+                int CurrentSequence = 1;
+                while(seen.Contains(CurrentNum + 1))
+                {
+                    CurrentNum++;
+                    CurrentSequence++;
+                }
+                if(CurrentSequence > Longest)
+                {
+                    Longest = CurrentSequence;
+                }
+                
+            }
+        }
+        return Longest;
+    }
