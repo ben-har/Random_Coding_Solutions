@@ -1,0 +1,33 @@
+public string LongestCommonPrefix(string[] strs) {
+        
+        String LongestStr = strs[0];
+        if(strs.Length == 1){return strs[0];}
+
+        foreach(string s in strs)
+        {
+            if(s.Length > LongestStr.Length){LongestStr = s;}
+        }
+
+        for(int i = 0; i < strs.Length; i++)
+        {
+            string tempStr = strs[i];
+            for(int j = 0; j < Math.Min(LongestStr.Length, tempStr.Length); j++)
+            {
+               
+               if(LongestStr[j] != tempStr[j])
+                {
+                    LongestStr = LongestStr.Substring(0, j);
+                    break;
+                }
+            }
+            if (tempStr.Length < LongestStr.Length)
+            {
+                LongestStr = tempStr;
+            }
+
+        }
+        return LongestStr;
+                
+
+       
+    }
